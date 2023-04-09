@@ -1,11 +1,11 @@
 const fs = require('fs');
-const input = fs.readFileSync('Baekjoon/example.txt').toString().trim()
+const input = Number(fs.readFileSync('Baekjoon/example.txt').toString().trim())
+const N = parseInt(input/4)
 
-const num = Number(input)
-let i = 1
-
-while ( i <= 9 ) {
-    const result = num * i
-    console.log(num + " * " + i + " = " + result) 
-    i++
+let string = ""
+for (let i=0; i < N; i++) {
+    string += "long "
 }
+console.log(string + "int")
+
+console.log("long ".repeat(N) + "int")
