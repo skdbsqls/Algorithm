@@ -9,4 +9,3 @@ for (let i = 1; i <= 30; i++) {
     // if ( arr.length === 2 ) break
 } 
 
-console.log(arr.join("\n"))
