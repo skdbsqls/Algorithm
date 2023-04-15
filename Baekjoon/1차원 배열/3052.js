@@ -15,3 +15,15 @@ const set = new Set(arr)
 const result = [...set]
 
 console.log(result.length)
+
+//조건문으로 푸는 방법
+let answer = new Array
+for (let i = 0; i < arr.length; i++) {
+    if ( answer.includes(arr[i]) ) {
+        continue
+    } else {
+        answer.push(arr[i])
+    }
+}
+
+console.log(answer.length)
