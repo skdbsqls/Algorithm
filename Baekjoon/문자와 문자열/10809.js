@@ -9,7 +9,7 @@ for ( let i = 97; i <= 122; i++ ) {
     arr.push(String.fromCharCode(i))
 } 
 
-// 정답 배열 만들기
+// 정답 배열 만들기 (a부터 z까지 배열과 같은 크기지만 -1로 채워진 배열)
 let answer = []
 for ( let i = 97; i <= 122; i++ ) {
     answer.push(-1)
@@ -24,5 +24,5 @@ for ( let i = 0; i < input.length; i++ ) {
     }
 }
 
+//join 사용하여 정답 출력
 console.log(answer.join(" "))
-
