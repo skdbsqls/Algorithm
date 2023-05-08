@@ -8,7 +8,7 @@ for ( let i = 0; i < 5; i++ ) {
     if ( input[i].length > maxcolumn ) {
         maxcolumn = input[i].length
     }
-} console.log(maxcolumn)
+} 
 
 // 입력값 행렬에 담기
 const arr = new Array(row)
@@ -28,4 +28,3 @@ for  ( let i = 0; i < maxcolumn; i++ ) {
     }
 }
 console.log(result)
-
