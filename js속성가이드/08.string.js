@@ -5,7 +5,7 @@ let name = prompt('당신의 이름은?')
 let age =  prompt('당신의 나이는?')
 
 // es5
-// console.log( '안녕 나는 ' + name + '야 내 나이는 ' + age + '살이야') 
+console.log( '안녕 나는 ' + name + '야 내 나이는 ' + age + '살이야') 
 
 // es6 (template literal)
 console.log( `안녕 나는 ${name} 이야 내 나이는 ${age}살이야` )
@@ -19,4 +19,6 @@ str.includes('id')
 // 문자열에서 특정 문자열을 가져오는 방법
 let string = 'stringify'
 
-str.slice(0,3)
+str.slice(0,3) // (start부터 end까지, end 미포함) 음수 허용
+str.substring(0,3) // (start와 end 사이) 음수 허용X
+str.substr(5,3) //(start부터 length개의 글자) 음수 허용

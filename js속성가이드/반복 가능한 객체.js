@@ -29,10 +29,10 @@ let like_array_obj = { length: 3, 0: '조깅화', 1: '축구화', 2: '농구화'
 
 // 유사 배열 객체는 반복 가능한 객체(Iterator)가 아님
 // for ~ of 문을 사용할 수 없음
-// for ( let v of like_array_obj ) {
-//     console.log(v)
-//     // TypeError: like_array_obj is not iterable
-// }
+for ( let v of like_array_obj ) { 
+    console.log(v)
+    // TypeError: like_array_obj is not iterable
+}
 
 // 유사 배열 객체를 반복 가능한 객체(Iterator)로 변경해야 for ~ of 문 사용 가능
 // [...] 구문은 사용하면 오류, Array.from() 매서드를 사용하여 유사 배열 객체를 배열 객체로 변경 가능
@@ -48,3 +48,17 @@ for ( let v of Array.from(like_array_obj).entries() ) {
 
 // Iterator 프로토콜의 조건
 // next() 메소드를 포함한 객체여야 하며, {value,done}의 속성을 가지는 결과를 객체로 반화해야 한다.
+
+var o ={};
+
+o[Symbol.iterator] = function(){
+    let i = 0
+    return {
+        next() {
+            return { done: false, value: i++ }
+        } 
+    }
+}
+
+var o_iterator =  o[Symbol.iterator]()
+o_iterator.next()

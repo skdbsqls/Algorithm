@@ -9,7 +9,7 @@ function* idMaker() {
 // 제너레이터 객체 참조
 var gen = idMaker();
 
-// 제너레이터 객체의 next() 멧드 사용
+// 제너레이터 객체의 next() 메소드 사용
 console.log(gen.next().value); // 0
 console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2

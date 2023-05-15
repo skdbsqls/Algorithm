@@ -22,9 +22,10 @@ arr.splice(1,3,'go','js')
 
 
 
-//map ( 배열을 받아서 새로운 배열을 만들 때 )
+//map ( 배열을 순환해서 새로운 배열을 만들 때 )
+
 let map = arr.map(function(item,index){
-    return `언어의 이름 ; ${item}`
+    return `언어의 이름 : ${item}`
 })
 
 console.log( map )
@@ -39,7 +40,7 @@ let filter = number.filter(function(item){
 
 console.log( filter )
 
-//reduce
+//reduce ( 초기 값을 설정해줘야 함! )
 
 let reduce = number.reduce(function(acc,cur){
     return acc + cur
